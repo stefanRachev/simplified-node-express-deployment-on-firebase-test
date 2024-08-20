@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "test-client-server-db"
+  },
+  "targets": {},
+  "etags": {
+    "test-client-server-db": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
+}
