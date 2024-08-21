@@ -12,13 +12,14 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "firebase-admin": "^12.1.0",
-    "firebase-functions": "^5.0.0"
+    "firebase-functions": "^5.1.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
-    "firebase-functions-test": "^3.1.0"
+    "firebase-functions-test": "^3.1.0",
+    "nodemon": "^3.1.4"
   },
   "engines": {
     "node": "18"
