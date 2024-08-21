@@ -1,13 +1,14 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const router = require("./router");
 const app = express();
-require("dotenv").config();
+const mongoose = require("mongoose")
 
 mongoose
   .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   })
   .then(() => {
     console.log("MongoDB connected");
