@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const router = require("./router");
 const app = express();
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 mongoose
   .connect(process.env.MONGODB_URI, {
@@ -17,7 +17,14 @@ mongoose
     console.error("MongoDB connection error:", err);
   });
 
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+};
+app.use(cors(corsOptions));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
